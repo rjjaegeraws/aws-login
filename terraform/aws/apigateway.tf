@@ -52,12 +52,17 @@ resource "aws_api_gateway_deployment" "samlpost" {
    ]
 
    rest_api_id = aws_api_gateway_rest_api.samlpost.id
-   stage_name  = "test"
+}
+
+resource "aws_api_gateway_stage" "samlpost" {
+  stage_name    = "saml"
+  rest_api_id   = aws_api_gateway_rest_api.samlpost.id
+  deployment_id = aws_api_gateway_deployment.samlpost.id
 }
 
 
 output "base_url" {
-  value = aws_api_gateway_deployment.samlpost.invoke_url
+  value = aws_api_gateway_stage.samlpost.invoke_url
 }
 
 

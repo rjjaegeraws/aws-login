@@ -205,7 +205,7 @@
        
         $.ajax({
             type: "POST",
-            url: "/test/accounttags",
+            url: "/saml/accounttags",
             data: JSON.stringify({samlResponse: samlResponse}),
             success: function(data, textStatus, jqXHR){
                 $('#loadingtags').remove();
@@ -295,7 +295,7 @@ export AWS_DEFAULT_REGION=ca-central-1 \n';
         
         $.ajax({
           type: "POST",
-          url: "/test/consolelogin",
+          url: "/saml/consolelogin",
           data: JSON.stringify(params),
           success: function(data, textStatus, jqXHR){
             
