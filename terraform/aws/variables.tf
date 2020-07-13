@@ -9,6 +9,6 @@ variable master_account_id {
 }
 
 variable keycloak_referer_url {
-    description = "Keycloak referer url. Example: https://mykeycloakurl:8443/auth/realms/Aws/protocol/saml/clients/amazon-aws"
+    description = "Keycloak referer url prefix. Example: https://mykeycloakurl:8443/auth/realms/Aws/"
     
 }

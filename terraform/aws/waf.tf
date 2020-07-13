@@ -40,7 +40,7 @@ resource "aws_wafv2_web_acl" "saml_waf" {
                         name = "referer"
                     }
                 }
-                positional_constraint = "EXACTLY"
+                positional_constraint = "STARTS_WITH"
                 search_string = var.keycloak_referer_url
                 text_transformation {
                   priority = 0
